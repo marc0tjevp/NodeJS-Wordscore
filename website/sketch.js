@@ -12,7 +12,7 @@ function submitWord() {
   var word = select('#word').value();
   var score = select('#score').value();
 
-  loadJSON('add/' + word + '/' + score, finished);
+  loadJSON('/add/' + word + '/' + score, finished);
 
   function finished(data) {
     console.log(data);
@@ -21,7 +21,7 @@ function submitWord() {
 }
 
 function getWords() {
-  var data = loadJSON('all', function finished() {
+  var data = loadJSON('/all', function finished() {
     console.log(data.additional);
   })
 }
