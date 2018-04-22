@@ -14,7 +14,8 @@ app.get('/', function returnEndPoints(request, response) {
   var reply = {
     getAllWords: '/all',
     searchWord: '/search/<query>',
-    addWord: '/add/<word>/<score>'
+    addWord: '/add/<word>/<score>',
+    addWordGUI: '/gui'
   }
   response.send(reply);
 });
